@@ -1,0 +1,55 @@
+{
+  "source_order": ["LinkedIn", "Indeed", "Eluta"],
+  "lanes": ["Example family A", "Example family B", "Example family C", "Example family D"],
+  "lane_queries": {
+    "Example family A": ["replace with a target role title"],
+    "Example family B": ["replace with a target role title"],
+    "Example family C": ["replace with a target role title"],
+    "Example family D": ["replace with a target role title"]
+  },
+  "core_queries": {
+    "Example family A": ["replace with primary search phrase 1", "replace with primary search phrase 2"],
+    "Example family B": ["replace with primary search phrase 1", "replace with primary search phrase 2"],
+    "Example family C": ["replace with primary search phrase 1", "replace with primary search phrase 2"],
+    "Example family D": ["replace with primary search phrase 1", "replace with primary search phrase 2"]
+  },
+  "fallback_queries": {
+    "Example family A": ["replace with a bounded related phrase"],
+    "Example family B": ["replace with a bounded related phrase"],
+    "Example family C": ["replace with a bounded related phrase"],
+    "Example family D": ["replace with a bounded related phrase"]
+  },
+  "sources": {
+    "LinkedIn": {
+      "monday_days": [1, 7],
+      "other_weekday_days": [1],
+      "radius_km": 25,
+      "sort": "Most recent",
+      "pages_per_lane": 2
+    },
+    "Indeed": {
+      "monday_days": [1, 7],
+      "other_weekday_days": [1],
+      "radius_km": 25,
+      "sort": "Date",
+      "pages_per_lane": 2
+    },
+    "Eluta": {
+      "monday_days": [7],
+      "other_weekday_days": [7],
+      "radius_km": 25,
+      "sort": "Date",
+      "pages_per_lane": 2
+    }
+  },
+  "rounds": {
+    "maximum": 2
+  },
+  "daily_report_target": 10,
+  "ranking_policy": {
+    "capability_ids": ["example_capability"]
+  },
+  "measurement": {
+    "days": 10
+  }
+}
